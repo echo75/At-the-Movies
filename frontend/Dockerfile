@@ -22,4 +22,4 @@ ADD src /app/src
 EXPOSE 5173
 
 # Run the app
-CMD ["npm", "run", "dev"]
+CMD ["sh", "-c", "npm run dev -- --port $PORT"]
