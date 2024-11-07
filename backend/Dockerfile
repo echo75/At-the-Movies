@@ -16,3 +16,4 @@ ADD src ./src
 
 # Run the app
 CMD ["npm", "start"]
+
