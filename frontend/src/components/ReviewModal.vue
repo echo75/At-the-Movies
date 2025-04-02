@@ -1,21 +1,11 @@
 <template>
-  <div
-    class="modal fade review-modal"
-    id="exampleModalCenteredScrollable"
-    tabindex="-1"
-    aria-labelledby="exampleModalCenteredScrollableTitle"
-    aria-hidden="true"
-  >
+  <div class="modal fade review-modal" id="exampleModalCenteredScrollable" tabindex="-1"
+    aria-labelledby="exampleModalCenteredScrollableTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalCenteredScrollableTitle">Rate this Movie</h1>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="container text-center">
@@ -25,11 +15,7 @@
                   <img v-bind:src="movieInfo?.Poster" alt="poster" class="img-fluid responsive" />
                 </div>
                 <div v-else>
-                  <img
-                    src="https://via.placeholder.com/300x450"
-                    alt="poster"
-                    class="img-fluid responsive"
-                  />
+                  <img src="https://placehold.co/300x450" alt="poster" class="img-fluid responsive" />
                 </div>
               </div>
               <div class="col content">

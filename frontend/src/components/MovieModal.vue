@@ -1,21 +1,11 @@
 <template>
-  <div
-    class="modal fade movie-modal"
-    id="exampleModalFullscreen"
-    tabindex="-1"
-    aria-labelledby="exampleModalFullscreenLabel"
-    aria-hidden="true"
-  >
+  <div class="modal fade movie-modal" id="exampleModalFullscreen" tabindex="-1"
+    aria-labelledby="exampleModalFullscreenLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
       <div class="modal-content">
         <div class="modal-header p-3 text-bg-dark">
           <h1 class="modal-title fs-4" id="exampleModalFullscreenLabel">Movie Details</h1>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="container text-center">
@@ -25,11 +15,7 @@
                   <img v-bind:src="movieInfo?.Poster" alt="poster" class="img-fluid responsive" />
                 </div>
                 <div v-else>
-                  <img
-                    src="https://via.placeholder.com/300x450"
-                    alt="poster"
-                    class="img-fluid responsive"
-                  />
+                  <img src="https://placehold.co/300x450" alt="poster" class="img-fluid responsive" />
                 </div>
               </div>
               <div class="col content">
