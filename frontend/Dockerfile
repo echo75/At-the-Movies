@@ -10,6 +10,7 @@ ADD package.json package-lock.json ./
 
 # Install dependencies
 RUN npm install
+#RUN npm install --production=false
 
 # Add the rest of the files
 ADD index.html /app/index.html
@@ -22,4 +23,5 @@ ADD src /app/src
 EXPOSE 5173
 
 # Run the app
-CMD ["sh", "-c", "npm run dev -- --port $PORT"]
+#CMD ["sh", "-c", "npm run dev -- --port $PORT"]
+CMD ["npm", "run", "dev"]
