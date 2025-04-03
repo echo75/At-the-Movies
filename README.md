@@ -6,7 +6,7 @@ A MEVN stack application to help anyone manage their own little virtual movie li
 
 ## Accessing the app online
 
-A hosted production version is available at https://at-the-movies-node.vercel.app/. Please have a little patience, as the app is hosted on a free tier of Vercel, Render and atlas mongoDB and may take a few seconds to start up. It's not installed with Docker. But this repo is made to be installed with th help of Docker within 5 minutes on your local machine. You have the choice -> Docker or npm installation.
+A hosted production version is available at https://at-the-movies-node.vercel.app/. Please have a little patience, as the app is hosted on a free tier of Vercel, Render and atlas mongoDB and may take a few seconds to start up. It's not installed with Docker. But this repo is made to be installed with help of Docker within 5 minutes on your local machine. You have the choice -> Docker or npm installation.
 
 ## Setting up locally for development
 
