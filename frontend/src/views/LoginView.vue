@@ -10,7 +10,8 @@ export default {
   data() {
     return {
       email: '',
-      password: ''
+      password: '',
+      loginError: ''  // Fehlermeldevariable hinzugefügt
     }
   },
   computed: {
@@ -19,16 +20,16 @@ export default {
   methods: {
     ...mapActions(useAccountStore, ['login']),
 
-     async doLogin() {
-    //   await this.login({ email: this.email, password: this.password })
-    //   this.$router.push('/login')
-    try {
+    async doLogin() {
+      try {
+        // Nur einmal login aufrufen
         await this.login({ email: this.email, password: this.password })
-        // Successful login
-        this.$router.push('/login')
+        
+        // Nach erfolgreichem Login zur Suchseite weiterleiten
+        this.$router.push('/search')
       } catch (error) {
-        // Handle login errors, set the loginError property to display the error message
-        this.loginError = 'Login failed. Please check your credentials.'
+        // Fehlerbehandlung
+        this.loginError = 'Login fehlgeschlagen. Bitte überprüfe deine Anmeldedaten.'
         alert(this.loginError)
       }
     }

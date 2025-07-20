@@ -37,7 +37,8 @@ export default {
 </script>
 
 <template lang="pug">
-p(v-if = 'isLoading') Loading...
+.loading-container(v-if = 'isLoading')
+  img(src="../src/assets/loading.png", alt="")
 div(v-else)
   header.p-3.text-bg-dark
     .container
@@ -81,5 +82,17 @@ html {
   color: #212529;
   background-color: #ffca2b;
   border-color: #ffca2b;
+}
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: leicht durchsichtiger Hintergrund */
+  z-index: 9999; /* Stellt sicher, dass der Ladeindikator über allem anderen liegt */
 }
 </style>
