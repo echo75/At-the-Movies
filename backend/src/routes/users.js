@@ -1,4 +1,5 @@
 const express = require('express')
+const { sendRegistrationConfirmationEmail } = require('../services/registermail')
 const User = require('../models/user')
 const Movie = require('../models/movie')
 const Review = require('../models/review')
@@ -15,6 +16,8 @@ router.post('/', async function (req, res, next) {
   try {
     const { firstName, surName, email, password } = req.body
     const user = await User.register({ firstName, surName, email }, password)
+    // E-Mail-Bestätigung senden
+    await sendRegistrationConfirmationEmail(user)
     res.send(user)
   } catch (error) {
     res.send(error.message)
