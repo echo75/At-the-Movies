@@ -26,4 +26,5 @@ coverage
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw?1:wq
+
